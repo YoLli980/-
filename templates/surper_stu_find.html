@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/surper_root.css">
+</head>
+<body>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("../static/img/timg.jpg");
+        background-size: 100%;
+    }
+
+    #top {
+        width: 100%;
+        background-color: #f2f2f2;
+        height: 50px;
+    }
+
+    .container {
+        margin: auto;
+        width: 1280px;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .container ul {
+        list-style-type: none;
+
+    }
+
+    .container ul a {
+        margin-top: 9px;
+        font-size: 18px;
+        text-decoration: none;
+
+    }
+
+    #left_side li a {
+        float: left;
+        padding-left: 30px;
+        font-size: 20px;
+    }
+
+    .input_find {
+        margin: 10px 10px;
+        display: inline;
+        float: left;
+        height: 24px;
+
+    }
+
+    .input_value {
+        border-radius: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+        padding-bottom: 2.5px;
+        padding-top: 2.5px;
+        text-align: center;
+        /*vertical-align: middle;*/
+        /*margin: 3px;*/
+    }
+
+    .but {
+        margin-left: 5px;
+        padding: 0px 3px 3px 3px;
+        border-radius: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+    }
+
+    .right_side {
+        width: 580px;
+    }
+
+    .right_side ul li {
+        float: left;
+        width: 80px;
+
+        margin: 5px auto;
+    }
+
+    .right_side ul li a {
+
+        display: block;
+        width: 100px;
+
+        text-align: center;
+    }
+
+    .right_side ul li ul li {
+        display: none;
+        margin: auto;
+
+    }
+
+    .right_side ul li ul li a {
+        margin: auto;
+        padding: 3px;
+        background-color: #dee1e6;
+        text-align: center;
+        border: 1px solid;
+    }
+
+    .right_side ul li:hover ul li {
+        display: block;
+        padding: 0px 3px;
+    }
+
+   #center {
+        margin: 10px auto;
+        width: 1252px;
+        background-color: #dee1e6;
+    }
+
+    #student {
+        width: 600px;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+
+</style>
+
+
+<div id="logo">
+
+</div>
+<div id="top">
+    <div class="container">
+
+        <ul id="left_side" style="margin: 0;padding: 0">
+            <li>
+                <a style="padding-left: 0px;" href="">课程知识点反馈系统后台管理</a>
+
+            </li>
+
+        </ul>
+
+        <form action="{{ url_for('surper_root_stu_find',page=1) }}" method="post">
+            <div class="input_find">
+            <input id="ipt_value" name="input_name" class="input_value" type="text" placeholder="学生姓名">
+            <input  class="but" type="submit" value="查找">
+        </div>
+        </form>
+        <div class="right_side right">
+
+            <script>
+                $(document).ready(function () {
+
+                    $("#but_find").click(function () {
+                         var Data={
+                             name:document.getElementById('ipt_value').value
+                         }
+                        $.ajax({
+                            type: 'POST',
+                            url: '/surper_root/find/',
+                            data: Data,
+                            success: function () {
+                                alert(Data)
+                            },
+                        });
+
+                    });
+                });
+            </script>
+
+            <ul>
+                <li>
+                    <a href="">查看信息</a>
+                    <ul>
+                        <li><a href="{{ url_for('surper_root_student',page = 1) }}"> 学生</a></li>
+                        <li><a href="{{ url_for('surper_root_teacher',page = 1) }}"> 教师</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                    <ul>
+
+
+                    </ul>
+                </li>
+
+                <li><a href="">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="center" style=" position: absolute; left: 0;right: 0;top: 50px;bottom: 0; z-index: -1">
+
+    {#超级管理员主页面，也是学生信息主页面#}
+    <h1 style="  margin: 0 ;padding: 0;" align="center">学生</h1>
+    <table id="student" valign="middle" border="1">
+        <tr>
+            <th style="width: 92px">学号</th>
+            <th style="width: 58px">姓名</th>
+            <th style="width: 92px">专业</th>
+            <th style="width: 92px">年级</th>
+            <th style="width: 184px">学院</th>
+            <th style="width: 60px">&nbsp</th>
+            <th style="width: 60px">&nbsp</th>
+
+        </tr>
+
+
+        {% for stduent in stduent_all.items %}
+            <tr>
+            <td style="color: deeppink">{{ stduent.num }}</td>
+            <td style="color: #484891">{{ stduent.name }}</td>
+            <td style="color: #616130">{{ stduent.major }}</td>
+            <td style="color: #616130">{{ stduent.grade }}</td>
+            <td style="color: #616130">{{ stduent.college }}</td>
+            <td><a href="{{ url_for('root_student_change',student_id=stduent.id) }}">修改</a></td>
+            <td><a id="rm_{{ stduent.id }}" href="#">删除</a></td>
+            </tr>
+
+            <script>
+
+                $(document).ready(function () {
+                    {#            解除管理员#}
+                    $('#rm_{{ stduent.id }}').click(function () {
+
+                        var DATAS = {
+                            rm_student: '{{stduent.id }}',
+                        }
+
+                        $.ajax({
+                            type: 'POST',
+                            url: '/student_delete/',
+                            data: DATAS,
+                            success: function () {
+                                alert('成功了')
+                                location.reload(true);
+                            },
+
+                        });
+                    })
+                })
+
+            </script>
+
+        {% else %}
+            <script>alert('没有数据，请添加数据')</script>
+        {% endfor %}
+
+            {% for message in get_flashed_messages() %}
+                {{ message }}
+            {% endfor %}
+    </table>
+
+    <div style="display: inline; width: 310px; position: absolute; left :0; right: 0;top: 460px; margin: auto">
+        <nav>
+            <ul class="pagination">
+                {% if stduent_all.has_prev %}
+                    <li class="page-item active">
+                        <a class="page-link"
+                           href="{{ url_for('surper_root_stu_find',page=stduent_all.page - 1) }}">上一页</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+                {% endif %}
+                {% for page in stduent_all.iter_pages(1,1,2,1) %}
+                    {% if page %}
+                        <li class="page-item {% if page==stduent_all.page %}active{% endif %}">
+                            <a class="page-link" href="{{ url_for('surper_root_stu_find',page=page) }}">{{ page }}</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">&hellip;</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% if stduent_all.has_next %}
+                    <li class="page-item active">
+                        <a class="page-link"
+                           href=" {{ url_for('surper_root_stu_find',page=stduent_all.page + 1) }}">下一页</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#">下一页</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+</body>
+</html>

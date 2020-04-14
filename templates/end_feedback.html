@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>期末评教</title>
+</head>
+<body>
+
+        <h2 align="center">请大家进行评教</h2>
+
+        <div style="width: 700px; height: 100%; margin: 30px auto; ">
+            <table id="box1" style="width: 10% ; text-align: center; margin-left: 30px;float: left ;background-color: red">
+                <tr>
+                    <th>老师</th>
+                </tr>
+                {% for foo in teacher_name %}
+                    <tr>
+                        <td>{{ foo }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            <table id="box2" style="width: 80% ; text-align: center; float: left;background-color: red;">
+                <tr>
+                    <th>课程名称</th>
+                    <th>课程时间</th>
+                    <th>课程学院</th>
+                    <th>评价</th>
+                </tr>
+                {% for schedule in schedules %}
+                    <tr>
+                        <td>{{ schedule.name }}</td>
+                        <td> {{ schedule.term }}</td>
+                        <td>{{ schedule.college }}</td>
+
+                        <td><select name="" id="">
+                            <option value="vary_good">讲课清晰，通俗易懂</option>
+                            <option value="good">讲课认真，负责</option>
+                            <option value="general">认真检查布置的作业</option>
+                            <option value="no_good">马马虎虎</option>
+                        </select></td>
+                    </tr>
+
+
+
+                {% endfor %}
+
+
+            </table>
+
+
+        <div id="input" style=" width:50px; clear: left ;position: relative ;top: 2px;left: 610px" >
+            <input type="button" style="padding-left:10px; padding-right:10px;"  value="提交">
+        </div>
+        </div>
+        
+
+
+
+
+
+
+{#        <script type="text/javascript">#}
+{#            var state = ${a}#}
+{#            alert(state);#}
+{#        </script>#}
+{#        {% for foo in main_list %}#}
+{##}
+{#            {{state}}#}
+{#                {{ foo.password}}#}
+{#                {{ foo.term}}#}
+{#                {{ foo.schedule_college}}#}
+{#            <br>#}
+{##}
+{##}
+{#        {% endfor %}#}
+
+
+</body>
+</html>

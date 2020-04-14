@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/surper_root.css">
+</head>
+<body>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+
+        background-size: 100%;
+    }
+
+    #top {
+        width: 100%;
+        background-color: #f2f2f2;
+        height: 50px;
+    }
+
+    .container {
+        margin: auto;
+        width: 1280px;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .container ul {
+        list-style-type: none;
+
+    }
+
+    .container ul a {
+        margin-top: 9px;
+        font-size: 18px;
+        text-decoration: none;
+
+    }
+
+    #left_side li a {
+        float: left;
+        padding-left: 30px;
+        font-size: 20px;
+    }
+
+    .input_find {
+        margin: 10px 10px;
+        display: inline;
+        float: left;
+        height: 24px;
+
+    }
+
+    .input_value {
+        border-radius: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+        padding-bottom: 2.5px;
+        padding-top: 2.5px;
+        text-align: center;
+        /*vertical-align: middle;*/
+        /*margin: 3px;*/
+    }
+
+    .but {
+        margin-left: 5px;
+        padding: 0px 3px 3px 3px;
+        border-radius: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+    }
+
+    .right_side {
+        width: 580px;
+    }
+
+    .right_side ul li {
+        float: left;
+        width: 80px;
+
+        margin: 5px auto;
+    }
+
+    .right_side ul li a {
+
+        display: block;
+        width: 100px;
+
+        text-align: center;
+    }
+
+    .right_side ul li ul li {
+        display: none;
+        margin: auto;
+
+    }
+
+    .right_side ul li ul li a {
+        margin: auto;
+        padding: 3px;
+        background-color: #dee1e6;
+        text-align: center;
+        border: 1px solid;
+    }
+
+    .right_side ul li:hover ul li {
+        display: block;
+        padding: 0px 3px;
+    }
+
+    #center {
+        margin: 10px auto;
+        width: 1252px;
+
+        background-color: #dee1e6;
+    }
+
+    #teacher {
+        width: 690px;
+        margin: 15px auto;
+        height: auto;
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+    }
+
+    td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    a {
+        text-decoration-line: none;
+        text-underline: none;
+        text-decoration: none;
+    }
+
+</style>
+
+
+<div id="logo">
+
+</div>
+<div id="top">
+    <div class="container">
+
+        <ul id="left_side" style="margin: 0;padding: 0">
+            <li>
+                <a style="padding-left: 0px;" href="">课程知识反馈系统后台管理</a>
+
+            </li>
+
+        </ul>
+
+        <form action="{{ url_for('surper_root_tea_find',page=1) }}" method="post">
+            <div class="input_find">
+            <input id="ipt_value" name="input_name" class="input_value" type="text" placeholder="教师姓名">
+            <input  class="but" type="submit" value="查找">
+        </div>
+        </form>
+
+        <div class="right_side right">
+
+            <ul>
+                <li>
+                    <a href="">查看信息</a>
+                    <ul>
+                        <li><a href="{{ url_for('surper_root_student',page = 1) }}"> 学生</a></li>
+                        <li><a href="{{ url_for('surper_root_teacher',page = 1) }}"> 教师</a></li>
+                        <li><a href="{{ url_for('super_root_show',page = 1) }}"> 管理员</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                    <ul>
+
+
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('home') }}">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div id="center" style=" position: absolute; left: 0;right: 0;top: 50px;bottom: 0; z-index: -1">
+<form class="form-container"  style="margin-left:-5%;padding:40px" method="post">
+        <h1 align="center" style="color: aqua"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;信息修改</h1>
+        <a ><span class=" name-caret">学生{# :{{ teacher_info.name }} #}</span></a>
+        <hr width="200px" color="#283348">
+        <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" pattern = "^-?\d+$" maxlength = 11 class="form-control" name="id" placeholder="学号">
+            </div>
+            <br><br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" placeholder="姓名">
+            </div><br><br>
+            <label for="inputPassword3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="密码">
+            </div><br><br>
+                <label for="inputPassword3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password1" placeholder="确认密码">
+                </div><br><br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="major" placeholder="专业">
+            </div><br><br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="grade" placeholder="班级">
+            </div><br><br>
+
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="department" placeholder="所属学院">
+            </div><br><br>
+            <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class=" btn-primary btn-lg btn-block">提交</button>
+{#                <button type="submit" class="btn btn-default">登陆</button>#}
+            </div><br><br>
+
+         <br class="col-sm-10">
+                {% for message in get_flashed_messages() %}
+                            <h4 align="center">{{ message }}</h4>
+                {% endfor %}
+        <br>
+    </form>
+
+
+
+</div>
+
+</body>
+</html>

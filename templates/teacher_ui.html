@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="../static/css/font-awesome.css" rel="stylesheet"> <!--选项的图标-->
+    <!-- jQuery -->
+    <link href='#css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="../static/css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--clock init-->
+    <script src="../static/js/css3clock.js"></script>
+    <!--Easy Pie Chart-->
+    <!--skycons-icons-->
+    <script src="../static/js/skycons.js"></script>
+
+    <script src="../static/js/jquery.easydropdown.js"></script>
+
+    <style type="text/css">
+        .box{
+
+            width: 80%;
+            height: 400px;
+        }
+        .box-1 ul li img{
+            width:100%;
+            height: 400px;
+
+        }
+        .mainDiv {
+            width:95%;
+    margin-top: 10%;
+    height: 100%;
+    background-color: #1ab2e8;
+
+        }
+
+        .viceDiv_1,.viceDiv_2,.viceDiv_3 {
+           float: left;
+    background-color: #6BAED6;
+    margin-top: 1% ;
+    margin-left: 2.5%;
+    width: 30%;
+    height: 0px;
+    margin-bottom: 1%;
+    border:3px solid #1ab2e8;
+        }
+
+        .big{
+            background:#e3e8eb;
+            z-index: -999;
+        }
+
+
+
+
+    </style>
+
+</head>
+<style type="text/css">
+    .viceDiv_1 { width: 30%; padding-bottom: 150px;  background-color: #1ab2e8; display: inline-block; background-size: cover; position: relative; cursor: pointer; transition: all 0.4s ease-out; box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44); overflow: hidden; color: white; }
+    .viceDiv_1 img { height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 0; transition: all 0.4s ease-out; }
+    .viceDiv_1 h2 {  text-align: center;  font-style: italic; transform: translateX(200px); }
+    .animate-text { opacity: 0; transition: all 0.6s ease-in-out; }
+    .viceDiv_1:hover { box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64); transform: scale(1.05); }
+    .viceDiv_1:hover img { opacity: 0.2; }
+    .viceDiv_1:hover .animate-text { transform: translateX(0); opacity: 1; }
+
+    .viceDiv_2 { width: 30%; padding-bottom: 150px;  background-color: #1ab2e8; display: inline-block; background-size: cover; position: relative; cursor: pointer; transition: all 0.4s ease-out; box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44); overflow: hidden; color: white; }
+    .viceDiv_2 img { height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 0; transition: all 0.4s ease-out; }
+    .viceDiv_2 h2 {  text-align: center;  font-style: italic; transform: translateX(200px); }
+    .animate-text { opacity: 0; transition: all 0.6s ease-in-out; }
+    .viceDiv_2:hover { box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64); transform: scale(1.05); }
+    .viceDiv_2:hover img { opacity: 0.2; }
+    .viceDiv_2:hover .animate-text { transform: translateX(0); opacity: 1; }
+
+    .viceDiv_3 { width: 30%; padding-bottom: 150px;  background-color: #1ab2e8; display: inline-block; background-size: cover; position: relative; cursor: pointer; transition: all 0.4s ease-out; box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44); overflow: hidden; color: white; }
+    .viceDiv_3 img { height: 100%; width: 100%; position: absolute; top: 0; left: 0; z-index: 0; transition: all 0.4s ease-out; }
+    .viceDiv_3 h2 {  text-align: center;  font-style: italic; transform: translateX(200px); }
+    .animate-text { opacity: 0; transition: all 0.6s ease-in-out; }
+    .viceDiv_3:hover { box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64); transform: scale(1.05); }
+    .viceDiv_3:hover img { opacity: 0.2; }
+    .viceDiv_3:hover .animate-text { transform: translateX(0); opacity: 1; }
+
+    * {padding: 0;margin: 0;font-family: "微软雅黑"}
+    ul,li {list-style: none;}
+    a {text-decoration: none}
+    .box{margin:0px auto;padding-top:0px;overflow: hidden;position: relative;}
+    .box-1 ul{}
+    .box-1 ul li{position: relative;overflow: hidden;}
+    .box-1 ul li img{display:block;}
+    .box-1 ul li h2{position: absolute;left: 0;bottom: 0;height: 40px;width:300px;background: rgba(125,125,120,.4);text-indent: 1em;
+        padding-right:500px ;font-size: 15px;line-height: 40px;text-overflow: ellipsis;overflow: hidden;
+        white-space: nowrap;font-weight: normal;color: ghostwhite}
+    .box-2{position: absolute;right: 10px;bottom: 14px;}
+    .box-2 ul li{float:left;width: 12px;height: 12px;overflow: hidden; margin: 0 5px; border-radius: 50%;
+        background: rgba(0,0,0,0.5);text-indent: 100px;cursor: pointer;}
+    .box-2 ul .on{background: rgba(255,255,255,0.6);}
+    .box-3 span{position: absolute;color:#FFFFFF;background: rgba(125,125,120,.3);width: 50px;height: 80px;
+        top:50%; font-family: "黑体"; line-height: 80px;font-size:60px;margin-top: -40px;
+        text-align: center;cursor: pointer;}
+    .box-3 .prev{left: 10px;}
+    .box-3 .next{right: 10px;}
+    .box-3 span::selection{background: transparent;}
+    .box-3 span:hover{background: rgba(125,125,120,.8);}
+</style>
+
+<script type="text/javascript">
+    window.onload = function(){
+        function $(param){
+            if(arguments[1] == true){
+                return document.querySelectorAll(param);
+            }else{
+                return document.querySelector(param);
+            }
+        }
+        var $box = $(".box");
+        var $box1 = $(".box-1 ul li",true);
+        var $box2 = $(".box-2 ul");
+        var $box3 = $(".box-3");
+        var $length = $box1.length;
+
+        var str = "";
+        for(var i =0;i<$length;i++){
+            if(i==0){
+                str +="<li class='on'>"+(i+1)+"</li>";
+            }else{
+                str += "<li>"+(i+1)+"</li>";
+            }
+        }
+        $box2.innerHTML = str;
+
+        var current = 0;
+
+        var timer;
+        timer = setInterval(go,4000);
+        function go(){
+            for(var j =0;j<$length;j++){
+                $box1[j].style.display = "none";
+                $box2.children[j].className = "";
+            }
+            if($length == current){
+                current = 0;
+            }
+            $box1[current].style.display = "block";
+            $box2.children[current].className = "on";
+            current++;
+        }
+
+        for(var k=0;k<$length;k++){
+            $box1[k].onmouseover = function(){
+                clearInterval(timer);
+            }
+            $box1[k].onmouseout = function(){
+                timer = setInterval(go,8000);
+            }
+        }
+        for(var p=0;p<$box3.children.length;p++){
+            $box3.children[p].onmouseover = function(){
+                clearInterval(timer);
+            };
+            $box3.children[p].onmouseout = function(){
+                timer = setInterval(go,8000);
+            }
+        }
+
+        for(var u =0;u<$length;u++){
+            $box2.children[u].index  = u;
+            $box2.children[u].onmouseover = function(){
+                clearInterval(timer);
+                for(var j=0;j<$length;j++){
+                    $box1[j].style.display = "none";
+                    $box2.children[j].className = "";
+                }
+                this.className = "on";
+                $box1[this.index].style.display = "block";
+                current = this.index +1;
+            }
+            $box2.children[u].onmouseout = function(){
+                timer = setInterval(go,8000);
+            }
+        }
+
+        $box3.children[0].onclick = function(){
+            back();
+        }
+        $box3.children[1].onclick = function(){
+            go();
+        }
+        function back(){
+            for(var j =0;j<$length;j++){
+                $box1[j].style.display = "none";
+                $box2.children[j].className = "";
+            }
+            if(current == 0){
+                current = $length;
+            }
+            $box1[current-1].style.display = "block";
+            $box2.children[current-1].className = "on";
+            current--;
+        }
+    }
+</script>
+<body >
+<nav class="navbar navbar-default" role="navigation"
+     style="margin-left:15%;width:70%;min-width:1000px;max-height:100px;box-shadow: 2px 3px 5px #285a63;border-radius: 10px">
+    <div class="container">
+            <h1><a href="{{ url_for('teacher_ui') }}" class="glyphicon glyphicon-education" style="background:none;float: left"></a><span style="float: left">课堂知识反馈 &nbsp;</span>
+                <form method="post" action="{{ url_for('root_find') }}" class="navbar-form navbar-left" style="margin-top:-5px;width: 30%">
+        <input type="text" name="input_name" class="form-control" placeholder="学生/教师名字">
+        <button type="submit" class="glyphicon glyphicon-search" value="查找" ></button>
+            </form>
+                <button  type="button" style="position:absolute;background-color:powderblue;margin-left:20%;font-size:30px;border-radius: 5px"><span class="glyphicon glyphicon-tower" ></span>
+                    <a href="{{ url_for('teacher_ui') }}" style="color:#000000;background-color:powderblue;font-size:20px">首页</a></button>
+            </h1>
+    </div>
+</nav>
+<div class="page-container" >
+    <div class="left-content" >
+
+        <div class="big">
+            <div class="box"><br><br>
+                <div class="box-1">
+                    <ul>
+                        <li>
+                            <img src="../static/img/666.jpg" alt="这里是第一张图片"></img>
+
+                        </li>
+                        <li>
+                            <img src="../static/img/13.jpg" alt="这里是第二张图片"></img>
+
+                        </li>
+                        <li>
+                            <img src="../static/img/6666.jpg" alt="这里是第三张图片"></img>
+
+                        </li>
+{#                        <li>#}
+{#                            <img src="../static/img/2.jpg" alt="这里是第四张图片"></img>#}
+{##}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <img src="../static/img/94.jpg" alt="这里是第五张图片"></img>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+                <div class="box-2">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="box-3">
+                    <span class="prev"> < </span>
+                    <span class="next"> > </span>
+                </div>
+            </div>
+        </div>
+        <div class="mainDiv" style="margin-top: 100px">
+            <div class="viceDiv_1" style="border-radius: 10px">
+                <a href="http://www.gdit.edu.cn" target="_blank"><img src="../static/img/333.PNG" width="100%" height="100%" /></a>
+                <div class="text">
+                    <a href="http://www.gdit.edu.cn" target="_blank"><h2 class="animate-text">点击进入科干院官网</h2></a>
+                </div>
+            </div>
+            <div class="viceDiv_2" style="border-radius: 10px">
+                <a href="http://jw.gdit.edu.cn/" target="_blank"> <img src="../static/img/36.png" width="100%"height="100%"/></a>
+                <div class="text">
+                    <a href="http://jw.gdit.edu.cn/" target="_blank"> <h2 class="animate-text">点击进入学院教务系统</h2></a>
+                </div>
+            </div>
+            <div class="viceDiv_3" style="border-radius: 10px">
+                <a href="http://library.gdit.edu.cn/" target="_blank"> <img src="../static/img/37.jpg" width="100%"height="100%" /></a>
+                <div class="text">
+                    <a href="http://library.gdit.edu.cn/" target="_blank"><h2 class="animate-text">点击进入学院图书馆</h2></a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-menu" style="background-color: #3bb3e0">
+            <header class="logo">
+                <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a
+                    href="{{ url_for('teacher_ui') }}"> <span id="logo"> <h1>教学反馈</h1></span>
+            </a>
+            </header>
+
+            <!--/down-->
+            <div class="down">
+                <a href="index.html"><img src="../static/img/1.jpg"></a>
+                <a href="index.html"><span class=" name-caret">{{ teacher_info.name }}</span></a>
+                <p>认真学习，努力变强！</p>
+                <ul>
+                    <li><a class="tooltips" href="{{ url_for('teacher_Per_info') }}"><span>个人中心</span><i
+                            class="lnr lnr-user"></i></a></li>
+                    <li><a class="tooltips" href="index.html"><span>设置</span><i class="lnr lnr-cog"></i></a></li>
+                    <li><a class="tooltips" href="{{ url_for('home') }}"><span>退出</span><i
+                            class="lnr lnr-power-switch"></i></a></li>
+                </ul>
+            </div>
+            <!--//down-->
+            <div class="menu" style="background-color: #2ecc71">
+                <ul id="menu" style="background-color: #2ecc71">
+                    <li><a href="{{ url_for('teacher_Per_info') }}"><i class="fa fa-tachometer"></i> <span>个人中心</span></a></li>
+                    <li><a href="#"><i class="lnr lnr-envelope"></i> <span>课程查询</span><span class="fa fa-angle-right"
+                                                                                            style="float: right"></span></a>
+                        <ul>
+                            <li><a href="{{ url_for('schedule') }}"><i class="fa fa-inbox"></i> 课程录入</a></li>
+                            <li><a href="{{ url_for('schedule_ui') }}"><i class="fa fa-pencil-square-o"></i> 课程展示</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+                    {% if teacher_info.is_root %}
+                        <li><a href="chart.html"><i class="lnr lnr-chart-bars"></i> <span>用户添加</span> <span
+                                class="fa fa-angle-right" style="float: right"></span></a>
+                            <ul>
+                                <li><a href="{{ url_for('add_teacher') }}"><i class="lnr lnr-map"></i> 教师</a></li>
+                                <li><a href="{{ url_for('add_student') }}"><i class="lnr lnr-apartment"></i> 学生</a></li>
+                            </ul>
+                        </li>
+                        <li id="menu-comunicacao"><a href="#"><i class="fa fa-smile-o"></i><span>用户信息</span><span
+                                class="fa fa-angle-double-right" style="float: right"></span></a>
+                            <ul id="menu-comunicacao-sub">
+
+                                <li id="menu-arquivos"><a href="{{ url_for('root_show_teacher',page = 1) }}">教师</a></li>
+                                <li id="menu-arquivos"><a href="{{ url_for('root_show_student',page = 1) }}">学生</a></li>
+                                <li id="menu-arquivos"><a href="{{ url_for('export_excel') }}">通过Excel导入信息</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var toggle = true;
+
+    $(".sidebar-icon").click(function() {
+        if (toggle)
+        {
+            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+            $("#menu span").css({"position":"absolute"});
+        }
+        else
+        {
+            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+            setTimeout(function() {
+                $("#menu span").css({"position":"relative"});
+            }, 400);
+        }
+
+        toggle = !toggle;
+    });
+
+    {#    $(document).ready(function () {#}
+    {#        $("li.{{last_year}}").click(function () {#}
+    {#            alert("ok")#}
+    {#            var data_info = {#}
+    {#                grade : {{last_year}},#}
+    {#                college:$(this).text()#}
+    {#            }#}
+    {#            $.ajax({#}
+    {#                type: 'POST',#}
+    {#                url: "/student_selet/",#}
+    {#                data: data_info,#}
+    {#                success: function (respose) {#}
+    {##}
+    {#                                }#}
+    {#            });#}
+    {#        });#}
+    {##}
+    {##}
+    {#        $("li.{{last_year_before}}").click(function () {#}
+    {#            alert("ok")#}
+    {#            var data_info = {#}
+    {#                grade : {{last_year_before}},#}
+    {#                college:$(this).text()#}
+    {#            }#}
+    {#            $.ajax({#}
+    {#                type: 'POST',#}
+    {#                url: "/student_selet/",#}
+    {#                data: data_info,#}
+    {#                success: function (respose) {#}
+    {##}
+    {#                                }#}
+    {#            });#}
+    {#        });#}
+    {##}
+    {##}
+    {#        $("li.{{now_year}}").click(function () {#}
+    {#            alert("ok")#}
+    {#            var data_info = {#}
+    {#                grade : {{now_year}},#}
+    {#                college:$(this).text()#}
+    {#            }#}
+    {#            $.ajax({#}
+    {#                type: 'POST',#}
+    {#                url: "/student_selet/",#}
+    {#                data: data_info,#}
+    {#                success: function (respose) {#}
+    {##}
+    {#                                }#}
+    {#            });#}
+    {#        });#}
+    {#    });#}
+
+</script>
+<script>
+    setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+        /* 鼠标点击特效 - 7Core.CN */
+        var a_idx = 0;jQuery(document).ready(function($) {$("body").click(function(e) {var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 100000000,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#ff6651"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},1500,function() {$i.remove();});});});
+</script>
+
+</body>
+</html>

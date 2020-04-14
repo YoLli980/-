@@ -1,0 +1,136 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#top {
+	width: 100%;
+	background-color: #f2f2f2;
+	height: 50px;
+}
+
+.container{
+	margin: auto;
+	width: 1280px;
+}
+
+.left{
+	float: left;
+}
+
+
+.right{
+	float: right;
+}
+
+
+.container ul {
+	list-style-type: none;
+
+}
+
+.container ul a{
+	margin-top :9px;
+	font-size: 18px;
+	text-decoration: none;
+
+}
+
+
+
+#left_side li a{
+	float: left;
+	padding-left:30px;
+	font-size: 20px;
+}
+
+.input_find{
+	margin: 10px 10px;
+	display: inline;
+	float: left;
+	height:24px;
+
+}
+
+.input_value{
+	border-radius: 5px 5px;
+	box-shadow: 0px 0px 5px #666;
+	padding-bottom: 2.5px;
+	padding-top:2.5px;
+	text-align: center;
+	/*vertical-align: middle;*/
+	/*margin: 3px;*/
+}
+
+.but{
+	margin-left: 5px;
+	padding:0px 3px 3px 3px ;
+	border-radius: 5px 5px;
+	box-shadow: 0px 0px 5px #666;
+}
+.right_side {
+	width: 580px;
+}
+
+
+.right_side ul li{
+	float: left;
+	width: 80px;
+
+	margin: 5px auto;
+}
+
+
+.right_side ul li a{
+
+	display: block;
+	width: 100px;
+
+	text-align: center;
+}
+
+.right_side ul li ul li{
+	display: none;
+	margin:auto;
+
+}
+
+.right_side ul li ul li a{
+	margin: auto;
+	padding: 3px;
+	background-color: #dee1e6;
+	text-align: center;
+	border:1px solid;
+}
+
+
+.right_side ul li:hover ul li {
+	display: block;
+	padding: 0px 3px;
+}
+
+
+#center{
+	margin:  auto;
+	width:1252px;
+
+	background-color: #dee1e6;
+}
+
+#teacher{
+	width: 600px;
+	height: 410px;
+	margin: auto;
+	padding: 2px 2px;
+	text-align: center;
+}
+
+#student{
+	width: 600px;
+	height: 410px;
+	margin: auto;
+	padding: 2px 2px;
+	text-align: center;
+}

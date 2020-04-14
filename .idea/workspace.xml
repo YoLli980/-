@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e06065fb-9e0c-4117-a507-eb505830079d" name="默认" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/project_traning2$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1571151031459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1205$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575782075816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1127$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1574905321230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1128$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575006318082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/project_traning$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1574687083609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1126$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1574828761328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="project_traning@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>surper_root/teacher</find>
+      <find>surper_root</find>
+      <find>teacher_change</find>
+      <find>teacher</find>
+      <find>teacher/</find>
+      <find>root_show_teacher</find>
+      <find>surper_teacher</find>
+      <find>surper</find>
+      <find>student_change</find>
+      <find>管理员</find>
+      <find>surper_root_t</find>
+      <find>超级</find>
+      <find>surper_root_tea/find</find>
+      <find>超级管理员</find>
+      <find>知识点</find>
+    </findStrings>
+  </component>
+  <component name="GotoClassSymbolConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="Angular2HTML" />
+      <filtered-out-file-type name="AngularJS" />
+      <filtered-out-file-type name="Apple JS" />
+      <filtered-out-file-type name="BuildoutCfg" />
+      <filtered-out-file-type name="CSS" />
+      <filtered-out-file-type name="Chameleon" />
+      <filtered-out-file-type name="CoffeeScript" />
+      <filtered-out-file-type name="CoffeeScriptLiterate" />
+      <filtered-out-file-type name="CommandLine" />
+      <filtered-out-file-type name="Cython" />
+      <filtered-out-file-type name="DB2" />
+      <filtered-out-file-type name="DTD" />
+      <filtered-out-file-type name="Derby" />
+      <filtered-out-file-type name="DjangoTemplate" />
+      <filtered-out-file-type name="Dockerfile" />
+      <filtered-out-file-type name="ECMA Script Level 4" />
+      <filtered-out-file-type name="ECMAScript 6" />
+      <filtered-out-file-type name="Flow JS" />
+      <filtered-out-file-type name="GQL" />
+      <filtered-out-file-type name="GWT JavaScript" />
+      <filtered-out-file-type name="GenericSQL" />
+      <filtered-out-file-type name="Gherkin" />
+      <filtered-out-file-type name="H2" />
+      <filtered-out-file-type name="HSQLDB" />
+      <filtered-out-file-type name="HTML" />
+      <filtered-out-file-type name="Haml" />
+      <filtered-out-file-type name="Ini" />
+      <filtered-out-file-type name="JQL" />
+      <filtered-out-file-type name="JQuery-CSS" />
+      <filtered-out-file-type name="JSON" />
+      <filtered-out-file-type name="JSRegexp" />
+      <filtered-out-file-type name="JSX Harmony" />
+      <filtered-out-file-type name="JavaScript" />
+      <filtered-out-file-type name="JavaScript 1.5" />
+      <filtered-out-file-type name="JavaScript 1.6" />
+      <filtered-out-file-type name="JavaScript 1.7" />
+      <filtered-out-file-type name="JavaScript 1.8" />
+      <filtered-out-file-type name="Jinja2" />
+      <filtered-out-file-type name="LESS" />
+      <filtered-out-file-type name="Locale" />
+      <filtered-out-file-type name="Mako" />
+      <filtered-out-file-type name="MySQL" />
+      <filtered-out-file-type name="Nashorn JS" />
+      <filtered-out-file-type name="Oracle" />
+      <filtered-out-file-type name="OracleSqlPlus" />
+      <filtered-out-file-type name="PostgreSQL" />
+      <filtered-out-file-type name="PostgresPLSQL" />
+      <filtered-out-file-type name="Puppet" />
+      <filtered-out-file-type name="Python" />
+      <filtered-out-file-type name="RELAX-NG" />
+      <filtered-out-file-type name="ReST" />
+      <filtered-out-file-type name="RegExp" />
+      <filtered-out-file-type name="SASS" />
+      <filtered-out-file-type name="SCSS" />
+      <filtered-out-file-type name="SQL" />
+      <filtered-out-file-type name="SQL92" />
+      <filtered-out-file-type name="SQLite" />
+      <filtered-out-file-type name="Stylus" />
+      <filtered-out-file-type name="Sybase" />
+      <filtered-out-file-type name="TEXT" />
+      <filtered-out-file-type name="TSQL" />
+      <filtered-out-file-type name="TypeScript" />
+      <filtered-out-file-type name="TypeScript JSX" />
+      <filtered-out-file-type name="Web2Py" />
+      <filtered-out-file-type name="XHTML" />
+      <filtered-out-file-type name="XML" />
+      <filtered-out-file-type name="YouTrack" />
+      <filtered-out-file-type name="textmate" />
+      <filtered-out-file-type name="yaml" />
+    </file-type-list>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProjectId" id="1U93BNkoju6VP0iSveIT4SLY4p6" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\project_traning(2)\templates" />
+      <recent name="F:\python_study\project_traning\static" />
+      <recent name="F:\python_study\project_traning" />
+      <recent name="F:\python_study\project_traning\static\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\课堂知识反馈系统\1204\templates" />
+      <recent name="D:\课堂知识反馈系统\1204" />
+      <recent name="C:\Users\Administrator\Desktop\project_traning(2)\templates" />
+      <recent name="C:\1128" />
+      <recent name="C:\1128\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.project_traning">
+    <configuration default="true" type="tests" factoryName="不至于">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project_traning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="文档">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="project_traning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration name="ee.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/1128/templates/ee.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="father.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/1128/templates/father.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="tc.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/1128/templates/tc.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="term_show.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/1126/templates/term_show.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="term_show.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project_traning/templates/term_show.html">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="project_traning" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <module name="project_traning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\project_traning\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project_traning.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.ee.html" />
+      <item itemvalue="JavaScript Debug.father.html" />
+      <item itemvalue="JavaScript Debug.tc.html" />
+      <item itemvalue="JavaScript Debug.term_show.html (1)" />
+      <item itemvalue="JavaScript Debug.term_show.html" />
+      <item itemvalue="Python.project_traning" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.term_show.html" />
+        <item itemvalue="JavaScript Debug.term_show.html (1)" />
+        <item itemvalue="JavaScript Debug.tc.html" />
+        <item itemvalue="JavaScript Debug.father.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e06065fb-9e0c-4117-a507-eb505830079d" name="默认" comment="" />
+      <created>1570583617970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570583617970</updated>
+      <workItem from="1574754849457" duration="1469000" />
+      <workItem from="1574758440653" duration="1794000" />
+      <workItem from="1574760253401" duration="1558000" />
+      <workItem from="1574763786552" duration="1142000" />
+      <workItem from="1574765258156" duration="387000" />
+      <workItem from="1574813873196" duration="1229000" />
+      <workItem from="1574815609707" duration="1790000" />
+      <workItem from="1574817418289" duration="1793000" />
+      <workItem from="1574819232536" duration="1796000" />
+      <workItem from="1574821051010" duration="1756000" />
+      <workItem from="1574822861268" duration="1784000" />
+      <workItem from="1574824925330" duration="1787000" />
+      <workItem from="1574826736605" duration="1774000" />
+      <workItem from="1574828548398" duration="1068000" />
+      <workItem from="1574853305785" duration="1034000" />
+      <workItem from="1574854430394" duration="1393000" />
+      <workItem from="1574856525902" duration="1471000" />
+      <workItem from="1574858415201" duration="1722000" />
+      <workItem from="1574860446181" duration="1338000" />
+      <workItem from="1574908968736" duration="36000" />
+      <workItem from="1574909060578" duration="1793000" />
+      <workItem from="1574910866103" duration="1796000" />
+      <workItem from="1574912675167" duration="1805000" />
+      <workItem from="1574914553133" duration="751000" />
+      <workItem from="1574920735572" duration="138000" />
+      <workItem from="1574920875030" duration="1360000" />
+      <workItem from="1574922446882" duration="1790000" />
+      <workItem from="1574924255319" duration="1789000" />
+      <workItem from="1574926067688" duration="1787000" />
+      <workItem from="1574927887673" duration="899000" />
+      <workItem from="1574928861577" duration="1789000" />
+      <workItem from="1574930670050" duration="396000" />
+      <workItem from="1574931276969" duration="1790000" />
+      <workItem from="1574933091618" duration="1489000" />
+      <workItem from="1574986931059" duration="1417000" />
+      <workItem from="1574988376145" duration="1791000" />
+      <workItem from="1574990187109" duration="1788000" />
+      <workItem from="1574991992923" duration="651000" />
+      <workItem from="1574992663532" duration="2211000" />
+      <workItem from="1574995630100" duration="2215000" />
+      <workItem from="1574998094933" duration="1792000" />
+      <workItem from="1574999910211" duration="1409000" />
+      <workItem from="1575286364176" duration="1789000" />
+      <workItem from="1575288179297" duration="1793000" />
+      <workItem from="1575289992580" duration="1791000" />
+      <workItem from="1575291803937" duration="1794000" />
+      <workItem from="1575293614800" duration="793000" />
+      <workItem from="1575348998214" duration="771000" />
+      <workItem from="1575350000365" duration="1052000" />
+      <workItem from="1575353196361" duration="1797000" />
+      <workItem from="1575355134653" duration="1493000" />
+      <workItem from="1575356947133" duration="1732000" />
+      <workItem from="1575361624736" duration="686000" />
+      <workItem from="1575363547661" duration="1797000" />
+      <workItem from="1575365378171" duration="1637000" />
+      <workItem from="1575421339963" duration="966000" />
+      <workItem from="1575422545404" duration="1500000" />
+      <workItem from="1575424324160" duration="693000" />
+      <workItem from="1575428857362" duration="3748000" />
+      <workItem from="1575434454337" duration="1228000" />
+      <workItem from="1575435699583" duration="1558000" />
+      <workItem from="1575438244035" duration="886000" />
+      <workItem from="1575439148675" duration="859000" />
+      <workItem from="1575506163294" duration="651000" />
+      <workItem from="1575506854476" duration="1792000" />
+      <workItem from="1575508663250" duration="1665000" />
+      <workItem from="1575510517135" duration="1791000" />
+      <workItem from="1575512329053" duration="1791000" />
+      <workItem from="1575526301194" duration="763000" />
+      <workItem from="1575614970998" duration="1754000" />
+      <workItem from="1575616841751" duration="1790000" />
+      <workItem from="1575618818191" duration="611000" />
+      <workItem from="1575706318794" duration="869000" />
+      <workItem from="1575708151728" duration="1099000" />
+      <workItem from="1575799835173" duration="801000" />
+      <workItem from="1575802560699" duration="1205000" />
+      <workItem from="1575962602039" duration="1422000" />
+      <workItem from="1575967897717" duration="1174000" />
+      <workItem from="1575969715497" duration="1203000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/1127$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1574861456595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/project_traning_2_$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575430627476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1208$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575969742636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1204$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575512363916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1205$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575710073254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1126$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1574760259993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/1128$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1574914723357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/project_traning$project_traning.coverage" NAME="project_traning Coverage Results" MODIFIED="1575366343628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>

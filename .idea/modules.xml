@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:/python_study/flask_chongdingxiang/.idea/flask_chongdingxiang.iml" filepath="F:/python_study/flask_chongdingxiang/.idea/flask_chongdingxiang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/project_traning.iml" filepath="$PROJECT_DIR$/.idea/project_traning.iml" />
+    </modules>
+  </component>
+</project>

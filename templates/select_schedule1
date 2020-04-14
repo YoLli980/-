@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+
+#container{overflow: hidden;}/* 清除浮动 */
+
+#container{ }
+
+.box1{width:74px;height: 100%;float: left;margin-left: 10%;background-color: #f1f2f6 ;}
+
+.box2{width:390px;height: 100%;float:left;background-color: #f1f2f6 ;}
+</style>
+
+</head>
+<body>
+
+<form method="post">
+
+    选择课程  &nbsp; <a href="{{ url_for('student_ui',login_id=lg_stu_id) }}">回到上一页</a>
+    <br>
+    <hr>
+<div id ="container" style="margin:11%">
+    <div   class="box1">
+        <table border="1">
+            <tr>
+                <td>课程老师</td>
+            </tr>
+
+                {% for teacher in teacher_name%}
+                    <tr id="abc">
+                        <td>&nbsp;{{ teacher }}</td>
+                    </tr>
+                {% endfor %}
+        </table>
+    </div>
+    <div class="box2"><table border="1">
+            <tr>
+                <td>课程名称</td>
+                <td>课程学院</td>
+                <td>上课时间</td>
+                <th></th>
+
+            </tr>
+
+                {% for schedule in schedule_all%}
+                    <tr id="abc">
+                        <td>{{ schedule.name }}</td>
+                        <td>{{ schedule.college }}</td>
+{#                        <td id="show"></td>#}
+                        <td>&nbsp;{{ schedule.term }}</td>
+                        <td><input type="checkbox" id="a" name = "s_option" value="{{ schedule.id }}"></td>
+                    </tr>
+                {% else %}
+                    <script>
+
+                        $(document).ready(function () {
+                            $(function () {
+                                $(".sub").hide()
+                            });
+                        });
+                    </script>
+                {% endfor %}
+
+        </table>
+</div>
+        <p><input class="sub" type="submit" style="width: 100px; height: 50px;margin-top:10px;margin-left: 10%;">
+
+            <script>
+
+                $(document).ready(function () {
+                    $("input.sub").click(function () {
+                        {#                               location.reload(true);#}
+                        alert("选课成功，按确定返回")
+                        {#                                location.reload(true);#}
+                    });
+                });
+            </script>
+
+            {% for message in get_flashed_messages() %}
+                <p style="color: red;">{{ message }}</p>
+        {% endfor %}
+    </p>
+
+
+</div>
+</form>
+ <style type ="text/css">
+    body{
+        background-image: url("../static/css/1.jpg");
+        background-repeat:no-repeat;
+        background-attachment: fixed;
+        width:100%;
+        height:100%;
+        top:0px;
+        left: 0px;
+        position:absolute;
+        z-index:-1;
+        background-size:100% 100%;
+    }
+</style>
+</body>
+</html>

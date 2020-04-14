@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/surper_root.css">
+</head>
+<body>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("../static/img/timg.jpg");
+        background-size: 100%;
+    }
+
+    #top {
+        width: 100%;
+        background-color: #f2f2f2;
+        height: 50px;
+    }
+
+    .container {
+        margin: auto;
+        width: 1280px;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .container ul {
+        list-style-type: none;
+
+    }
+
+    .container ul a {
+        margin-top: 9px;
+        font-size: 18px;
+        text-decoration: none;
+
+    }
+
+    #left_side li a {
+        float: left;
+        padding-left: 30px;
+        font-size: 20px;
+    }
+
+    .input_find {
+        margin: 10px 10px;
+        display: inline;
+        float: left;
+        height: 24px;
+
+    }
+
+    .input_value {
+        border-radius: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+        padding-bottom: 2.5px;
+        padding-top: 2.5px;
+        text-align: center;
+        /*vertical-align: middle;*/
+        /*margin: 3px;*/
+    }
+
+    .but {
+        margin-left: 5px;
+        padding: 0px 3px 3px 3px;
+        border-radius: 5px 5px;
+        box-shadow: 0px 0px 5px #666;
+    }
+
+    .right_side {
+        width: 580px;
+    }
+
+    .right_side ul li {
+        float: left;
+        width: 80px;
+
+        margin: 5px auto;
+    }
+
+    .right_side ul li a {
+
+        display: block;
+        width: 100px;
+
+        text-align: center;
+    }
+
+    .right_side ul li ul li {
+        display: none;
+        margin: auto;
+
+    }
+
+    .right_side ul li ul li a {
+        margin: auto;
+        padding: 3px;
+        background-color: #dee1e6;
+        text-align: center;
+        border: 1px solid;
+    }
+
+    .right_side ul li:hover ul li {
+        display: block;
+        padding: 0px 3px;
+    }
+
+    #center {
+        margin: 10px auto;
+        width: 1252px;
+
+        background-color: #dee1e6;
+    }
+
+    #teacher {
+        width: 650px;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    td {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    a {
+        text-decoration-line: none;
+        text-underline: none;
+        text-decoration: none;
+    }
+
+</style>
+
+
+<div id="logo">
+
+</div>
+<div id="top">
+    <div class="container">
+
+        <ul id="left_side" style="margin: 0;padding: 0">
+            <li>
+                <a style="padding-left: 0px;" href="">课程知识点反馈系统后台管理</a>
+
+            </li>
+
+        </ul>
+
+        <form action="{{ url_for('surper_root_tea_find',page=1) }}" method="post">
+            <div class="input_find">
+            <input id="ipt_value" name="input_name" class="input_value" type="text" placeholder="教师姓名">
+            <input  class="but" type="submit" value="查找">
+        </div>
+        </form>
+        <div class="right_side right">
+
+            <script>
+                $(document).ready(function () {
+
+                    $("#but_find").click(function () {
+                         var Data={
+                             name:document.getElementById('ipt_value').value
+                         }
+                        $.ajax({
+                            type: 'POST',
+                            url: '/surper_root/find/',
+                            data: Data,
+                            success: function () {
+                                alert(Data)
+                            },
+                        });
+
+                    });
+                });
+            </script>
+
+            <ul>
+                <li>
+                    <a href="">查看信息</a>
+                    <ul>
+                        <li><a href="{{ url_for('surper_root_student',page = 1) }}"> 学生</a></li>
+                        <li><a href="{{ url_for('surper_root_teacher',page = 1) }}"> 教师</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                    <ul>
+
+
+                    </ul>
+                </li>
+
+                <li><a href="">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div id="center" style=" position: absolute; left: 0;right: 0;top: 50px;bottom: 0; z-index: -1">
+    <h1 style="margin: 0;padding: 0;" align="center">教师</h1>
+    <table id="teacher" valign="middle" border="1">
+        <tr>
+            <th class="num" style="width: 93px">工号</th>
+            <th class="name" style="width: 58px">姓名</th>
+            <th class="college" style="width: 185px">学院</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>管理员</th>
+            {#            <th>&nbsp;</th>#}
+        </tr>
+
+        {% for teacher in teacher_all.items %}
+            <tr>
+                <td style="color: deeppink">{{ teacher.num }}</td>
+                <td style="color: #484891">{{ teacher.name }}</td>
+                <td style="color: #616130">{{ teacher.college }}</td>
+                <td><a id="de_{{ teacher.id }}" href="#">删除</a></td>
+                <td><a href="{{ url_for("root_teacher_change",teacher_id=teacher.id) }}">修改</a></td>
+                <td><a id="set_{{ teacher.id }}" href="#">设为管理员</a></td>
+                <td><a id="rm_{{ teacher.id }}" href="#">解除管理员</a></td>
+                {% if teacher.is_root %}
+                    <td>是</td>
+                    {% else %}
+                    <td>否</td>
+                {% endif %}
+            </tr>
+
+
+            <script>
+                $(document).ready(function () {
+                    {#解除管理员#}
+                    $('#rm_{{ teacher.id }}').click(function () {
+
+                        var DATAS = {
+                            rm_teacher: '{{teacher.id }}',
+                        }
+
+                        $.ajax({
+                            type: 'POST',
+                            url: '/surper_root/re_root/',
+                            data: DATAS,
+                            success: function () {
+                                alert('成功解除管理员')
+                                location.reload(true)
+                            },
+
+                        });
+                    })
+
+
+                    $('#set_{{ teacher.id }}').click(function () {
+
+                        var DATAS = {
+                            se_teacher: '{{teacher.id }}',
+                        }
+
+                        $.ajax({
+                            type: 'POST',
+                            url: '/surper_root/set_root/',
+                            data: DATAS,
+                            success: function () {
+                                alert('成功设为管理员')
+                                location.reload(true)
+                            },
+
+                        });
+                    })
+
+
+                    {#删除#}
+                    $('#de_{{ teacher.id }}').click(function () {
+
+                        var DATAS = {
+                            de_teacher: '{{teacher.id }}',
+                        }
+
+                        $.ajax({
+                            type: 'POST',
+                            url: '/teacher_delete/',
+                            data: DATAS,
+                            success: function () {
+                                location.reload(true);
+                            }
+                        });
+
+                    });
+                })
+
+
+            </script>
+
+        {% else %}
+            <script>alert('没有数据，请添加数据')</script>
+        {% endfor %}
+
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+    </table>
+    <div style="display: inline; width: 310px; position: absolute; left :0; right: 0;top: 460px; margin: auto">
+        <nav>
+            <ul class="pagination">
+                {% if teacher_all.has_prev %}
+                    <li class="page-item active">
+                        <a class="page-link"
+                           href="{{ url_for('surper_root_tea_find',page=teacher_all.page - 1) }}">上一页</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+                {% endif %}
+                {% for page in teacher_all.iter_pages(1,1,2,1) %}
+                    {% if page %}
+                        <li class="page-item {% if page==teacher_all.page %}active{% endif %}">
+                            <a class="page-link" href="{{ url_for('surper_root_tea_find',page=page) }}">{{ page }}</a>
+                        </li>
+                    {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">&hellip;</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% if teacher_all.has_next %}
+                    <li class="page-item active">
+                        <a class="page-link"
+                           href=" {{ url_for('surper_root_tea_find',page=teacher_all.page + 1) }}">下一页</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#">下一页</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    font-size: 1.5em;
+    text-decoration: none;
+}
+a:hover{
+    color:blue;
+}
+.containt{
+    width: 1280px;
+    height: 100%;
+    border: 1px;
+    margin: 0 auto;
+}
+.box{
+    border: 1px;
+    margin: 0 auto;
+    width: 600px;
+    height: 100%;
+
+}
+.box_left{
+    border: 1px;
+    float: left;
+    margin-top: 73px;
+    margin-left: 30px;
+    border: 1px solid;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    padding-right: 3px;
+}
+.box_rigth{
+    border: 1px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 2px;
+    border: 1px solid;
+}
+.sub{
+
+    float:left;
+    margin: 0 auto;
+
+}

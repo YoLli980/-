@@ -1,0 +1,53 @@
+{% extends "father.html" %}
+{% block title %}
+    添加用户界面
+{% endblock %}
+
+{% block main %}
+    <br><h1 align="center">教师修改</h1><br>
+    <div class="form-container">
+        <form method="post">
+            <br><br>
+
+            <hr width="300px" color="#283348">
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" pattern="^-?\d+$" maxlength=11 name="id" placeholder="工号">
+            </div>
+            <br> <br>
+
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" placeholder="姓名">
+            </div>
+            <br> <br>
+            <label for="inputPassword3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="密码">
+            </div>
+            <br> <br>
+            <label for="inputPassword3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password1" placeholder="确认密码">
+            </div>
+            <br> <br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="department" placeholder="所属部门">
+            </div>
+            <br> <br>
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class=" btn-primary btn-lg btn-block">提交</button>
+                {#                <button type="submit" class="btn btn-default">登陆</button>#}
+            </div>
+            <br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                {% for message in get_flashed_messages() %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+            <br> <br>
+        </form>
+    </div>
+{% endblock %}

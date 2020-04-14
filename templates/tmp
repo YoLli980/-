@@ -1,0 +1,201 @@
+{#    <p>该课程对应的所有知识点 <a href="{{ url_for('student_ui') }}"> &nbsp;返回上一页</a></p>#}
+{##}
+{#    <h1>没有评论了的知识点</h1>#}
+{#    <br>#}
+
+{#    {% if have_comments %}#}
+{#        {% for student_kown in no_comments %}#}
+{#            <tr>#}
+{#                <td>{{ student_kown.id }}&nbsp;</td>#}
+{#                <td>{{ student_kown.name }}&nbsp;</td>#}
+{##}
+{#            </tr>#}
+{##}
+{#            {% if student_kown.updated_time %}#}
+{#                <span> &nbsp;最近一次更新 ：&nbsp;{{ student_kown.updated_time }}</span>#}
+{#            {% else %}#}
+{#                <span> &nbsp;{{ student_kown.created_time }}</span>#}
+{#            {% endif %}#}
+{##}
+{#            </h5>#}
+{##}
+{#            <br>#}
+{#            <pr>该知识点你掌握了吗</pr> &nbsp;#}
+{##}
+{#            <a class="{{ student_kown.name }}">评论</a>#}
+{##}
+{#            <div id="{{ student_kown.id }}">#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" name="radio" value="掌握">掌握#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" name="radio" value="部分掌握">部分掌握#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" name="radio" value="未掌握">未掌握#}
+{#                </label>#}
+{#                <br>#}
+{#                <div class="form-group">#}
+{#                    <label for="inputEmail3" class="col-sm-2 control-label"></label>#}
+{##}
+{#                </div>#}
+{#                <div>#}
+{#                    <input class="form-control" size="40" id="a" name="{{ student_kown.name }}"#}
+{#                           placeholder="对该知识点还存在哪些疑问？"></input>#}
+{#                </div>#}
+{#                <p><input class="{{ student_kown.id }}" id="{{ student_kown.name }}" type="button" value="提交"></p>#}
+{##}
+{##}
+{#            </div>#}
+{##}
+{#            <hr>#}
+{##}
+            {#             评论后隐藏#}
+{#            <script>#}
+{#                $(document).ready(function () {#}
+{#                    $("a.{{ student_kown.name }}").click(function () {#}
+{#                        $("#{{ student_kown.id }}").toggle()#}
+{#                    });#}
+{##}
+{#                    $(function () {#}
+{#                        $("#{{ student_kown.id }}").hide()#}
+                        {#                         alert("ok")#}
+{#                    })#}
+{#                    $("input.{{ student_kown.id }}").click(function () {#}
+{#                        var data_info = {#}
+{#                            radio_name: $('input:radio:checked').val(),#}
+{#                            content: $("input[name={{ student_kown.name }}]").val(),#}
+{#                            kown_id:{{ student_kown.id }}#}
+{#                        }#}
+{#                        $.ajax({#}
+{#                            type: "POST",#}
+{#                            url: "/student_feedback/",#}
+{#                            data: data_info,#}
+{#                            success: function (reposen) {#}
+{#                                console.log("ok")#}
+{#                                $("div#{{ student_kown.id }}").hide()#}
+{#                            }#}
+{#                        })#}
+{#                    });#}
+{#                });#}
+{#            </script>#}
+{##}
+{#        {% endfor %}#}
+{##}
+{##}
+{##}
+{##}
+{#    {% else %}#}
+{##}
+{#        <br>#}
+{#        <h1>已经评论了的</h1>#}
+{##}
+{#        {% for have_comment in have_comments %}#}
+{#            <tr>#}
+{#                <td>{{ have_comment.id }}&nbsp;</td>#}
+{#                <td>{{ have_comment.name }}&nbsp;</td>#}
+{##}
+{#            </tr>#}
+{##}
+            {#            {% if have_comment.updated_time %}#}
+            {#                <span> &nbsp;最近一次更新 ：&nbsp;{{ have_comment.updated_time }}</span>#}
+            {#            {% else %}#}
+            {#                <span> &nbsp;{{ have_comment.created_time }}</span>#}
+            {#            {% endif %}#}
+{#        {% endfor %}#}
+{##}
+{#    {% endif %}#}
+{##}
+{#    {% for message in get_flashed_messages() %}#}
+{#        <p>{{ message }}</p>#}
+{#    {% endfor %}#}
+{##}
+{##}
+
+
+{##}
+{#       <br>#}
+{##}
+{##}
+{#        {% for student_kown in no_comments %}#}
+{#            <tr>#}
+{#                <td>{{ student_kown.id }}&nbsp;</td>#}
+{#                <td>{{ student_kown.name }}&nbsp;</td>#}
+{##}
+{#            </tr>#}
+{##}
+{#            {% if student_kown.updated_time %}#}
+{#                <span> &nbsp;最近一次更新 ：&nbsp;{{ student_kown.updated_time }}</span>#}
+{#            {% else %}#}
+{#                <span> &nbsp;{{ student_kown.created_time }}</span>#}
+{#            {% endif %}#}
+{##}
+{#            </h5>#}
+{##}
+{#            <br>#}
+{#            <pr>该知识点你掌握了吗</pr> &nbsp;#}
+{##}
+{#            <a class="{{ student_kown.name }}">评论</a>#}
+{##}
+{#            <div id="{{ student_kown.id }}">#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" name="radio" value="掌握">掌握#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" name="radio" value="部分掌握">部分掌握#}
+{#                </label>#}
+{#                <label class="radio-inline">#}
+{#                    <input type="radio" name="radio" value="未掌握">未掌握#}
+{#                </label>#}
+{#                <br>#}
+{#                <div class="form-group">#}
+{#                    <label for="inputEmail3" class="col-sm-2 control-label"></label>#}
+{##}
+{#                </div>#}
+{#                <div>#}
+{#                    <input class="form-control" size="40" id="a" name="{{ student_kown.name }}"#}
+{#                           placeholder="对该知识点还存在哪些疑问？"></input>#}
+{#                </div>#}
+{#                <p><input class="{{ student_kown.id }}" id="{{ student_kown.name }}" type="button" value="提交"></p>#}
+{##}
+{##}
+{#            </div>#}
+{##}
+{#            <hr>#}
+{##}
+{#                         评论后隐藏#}
+{#            <script>#}
+{#                $(document).ready(function () {#}
+{#                    $("a.{{ student_kown.name }}").click(function () {#}
+{#                        $("#{{ student_kown.id }}").toggle()#}
+{#                    });#}
+{##}
+{#                    $(function () {#}
+{#                        $("#{{ student_kown.id }}").hide()#}
+{#                        alert("ok")#}
+{#                    })#}
+{#                    $("input.{{ student_kown.id }}").click(function () {#}
+{#                        var data_info = {#}
+{#                            radio_name: $('input:radio:checked').val(),#}
+{#                            content: $("input[name={{ student_kown.name }}]").val(),#}
+{#                            kown_id:{{ student_kown.id }}#}
+{#                        }#}
+{#                        $.ajax({#}
+{#                            type: "POST",#}
+{#                            url: "/student_feedback/",#}
+{#                            data: data_info,#}
+{#                            success: function (reposen) {#}
+{#                                console.log("ok")#}
+{#                                $("div#{{ student_kown.id }}").hide()#}
+{#                            }#}
+{#                        })#}
+{#                    });#}
+{#                });#}
+{#            </script>#}
+{##}
+{#        {% endfor %}#}
+{# </form  >#}
+{##}
+{#    {% for message in get_flashed_messages() %}#}
+{#        <p>{{ message }}</p>#}
+{#    {% endfor %}#}

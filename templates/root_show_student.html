@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom CSS -->
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Graph CSS -->
+    <link href="../static/css/font-awesome.css" rel="stylesheet"> <!--选项的图标-->
+    <!-- jQuery -->
+    <link href='#css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="../static/css/icon-font.min.css" type='text/css'/>
+    <!-- //lined-icons -->
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--clock init-->
+    <script src="../static/js/css3clock.js"></script>
+    <!--Easy Pie Chart-->
+    <!--skycons-icons-->
+    <script src="../static/js/skycons.js"></script>
+
+    <script src="../static/js/jquery.easydropdown.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        /* Table Styles */
+        .table-wrapper {
+            margin: 0 auto;
+
+        }
+        .fl-table {
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 100%;
+            white-space: nowrap;
+            background-color: white;
+            margin: 0 auto;
+        }
+        .fl-table td, .fl-table th {
+            text-align: center;
+            padding: 8px;
+        }
+        .fl-table td {
+            border-right: 1px solid #f8f8f8;
+            font-size: 12px;
+        }
+        .fl-table thead th {
+            color: #ffffff;
+            background: #324960;
+        }
+        .fl-table thead th:nth-child(odd) {
+            color: #ffffff;
+            background: #324960;
+        }
+
+        .fl-table tr:nth-child(even) {
+            background: #F8F8F8;
+        }
+        /* Resposive */
+        @media (max-width: 767px) {
+            .fl-table {
+                display: block;
+                width: 100%;
+            }
+            .table-wrapper:before {
+            {# content: "Scroll horizontally <"; #} display: block;
+                text-align: right;
+                font-size: 11px;
+                color: white;
+                padding: 0 0 10px;
+            }
+            .fl-table thead, .fl-table tbody, .fl-table thead th {
+                display: block;
+            }
+            .fl-table thead th:last-child {
+                border-bottom: none;
+            }
+            .fl-table thead {
+                float: left;
+            }
+            .fl-table tbody {
+                width: auto;
+                position: relative;
+                overflow-x: auto;
+            }
+            .fl-table td, .fl-table th {
+                padding: 20px .625em .625em .625em;
+                height: 60px;
+                vertical-align: middle;
+                box-sizing: border-box;
+                overflow-x: hidden;
+                overflow-y: auto;
+                width: 120px;
+                font-size: 13px;
+                text-overflow: ellipsis;
+            }
+            .fl-table thead th {
+                text-align: left;
+                border-bottom: 1px solid #f7f7f9;
+            }
+
+            .fl-table tbody tr {
+                display: table-cell;
+            }
+
+            .fl-table tbody tr:nth-child(odd) {
+                background: none;
+            }
+
+            .fl-table tr:nth-child(even) {
+                background: transparent;
+            }
+
+            .fl-table tr td:nth-child(even) {
+                border-right: 1px solid #E6E4E4;
+            }
+
+            .fl-table tbody td {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+    <style type="text/css">
+        .right{
+            width: 650px;
+            height:100%;
+            background-color: cornflowerblue;
+            margin: 0 auto;
+
+        }
+        .form-container{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation" style="margin-left:15%;width:70%;min-width:1000px;max-height:100px;box-shadow: 2px 3px 5px #285a63;border-radius: 10px">
+    <div class="container">
+        <h1><a href="{{ url_for('teacher_ui') }}" class="glyphicon glyphicon-education" style="background:none;float: left"></a><span style="float: left">课堂知识反馈 &nbsp;</span>
+            <form method="post" action="{{ url_for('root_find') }}" class="navbar-form navbar-left" style="margin-top:-5px;width: 30%">
+                <input type="text" name="input_name" class="form-control" placeholder="学生/教师名字">
+                <button type="submit" class="glyphicon glyphicon-search" value="查找" ></button>
+            </form>
+            <button  type="button" style="position:absolute;background-color:powderblue;margin-left:20%;font-size:25px;border-radius: 5px"><span class="glyphicon glyphicon-share-alt" ></span>
+                <a href="{{ url_for('teacher_ui') }}" style="color:#000000;background-color:powderblue;font-size:20px">返回上一页</a></button>
+        </h1>
+    </div>
+</nav>
+<div class="page-container">
+    <div class="left-content">
+        <div class="sidebar-menu" style="background-color: #3bb3e0">
+            <header class="logo">
+                <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a
+                    href="{{ url_for('teacher_ui') }}"> <span id="logo"> <h1>教学反馈</h1></span>
+            </a>
+            </header>
+
+            <!--/down-->
+            <div class="down">
+                <a href="index.html"><img src="../static/img/1.jpg"></a>
+                <a href="index.html"><span class=" name-caret">{{ teacher_info.name }}</span></a>
+                <p>认真学习，努力变强！</p>
+                <ul>
+                    <li><a class="tooltips" href="{{ url_for('teacher_Per_info') }}"><span>个人中心</span><i
+                            class="lnr lnr-user"></i></a></li>
+                    <li><a class="tooltips" href="index.html"><span>设置</span><i class="lnr lnr-cog"></i></a></li>
+                    <li><a class="tooltips" href="{{ url_for('home') }}"><span>退出</span><i
+                            class="lnr lnr-power-switch"></i></a></li>
+                </ul>
+            </div>
+            <!--//down-->
+            <div class="menu" style="background-color: #2ecc71">
+                <ul id="menu" style="background-color: #2ecc71">
+                    <li><a href="{{ url_for('teacher_Per_info') }}"><i class="fa fa-tachometer"></i>
+                        <span>个人中心</span></a></li>
+                    <li><a href="#"><i class="lnr lnr-envelope"></i> <span>课程查询</span><span
+                            class="fa fa-angle-right"
+                            style="float: right"></span></a>
+                        <ul>
+                            <li><a href="{{ url_for('schedule') }}"><i class="fa fa-inbox"></i> 课程录入</a></li>
+                            <li><a href="{{ url_for('schedule_ui') }}"><i class="fa fa-pencil-square-o"></i>
+                                课程展示</a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% if teacher_info.is_root %}
+                        <li><a href="chart.html"><i class="lnr lnr-chart-bars"></i> <span>用户添加</span> <span
+                                class="fa fa-angle-right" style="float: right"></span></a>
+                            <ul>
+                                <li><a href="{{ url_for('add_teacher') }}"><i class="lnr lnr-map"></i> 教师</a></li>
+                                <li><a href="{{ url_for('add_student') }}"><i class="lnr lnr-apartment"></i> 学生</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-comunicacao"><a href="#"><i class="fa fa-smile-o"></i><span>用户信息</span><span
+                                class="fa fa-angle-double-right" style="float: right"></span></a>
+                            <ul id="menu-comunicacao-sub">
+
+                                <li id="menu-arquivos"><a href="{{ url_for('root_show_teacher',page = 1) }}">教师</a>
+                                </li>
+                                <li id="menu-arquivos"><a href="{{ url_for('root_show_student',page = 1) }}">学生</a>
+                                </li>
+                                <li id="menu-arquivos"><a href="{{ url_for('export_excel') }}">通过Excel导入信息</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{#菜单栏隐藏#}
+<script>
+    var toggle = true;
+
+    $(".sidebar-icon").click(function () {
+        if (toggle) {
+            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+            $("#menu span").css({"position": "absolute"});
+        }
+        else {
+            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+            setTimeout(function () {
+                $("#menu span").css({"position": "relative"});
+            }, 400);
+        }
+        toggle = !toggle;
+    });
+</script>
+<div class="right" style="box-shadow: 3px 5px 10px #285a63;border-radius: 10px">
+    <hr>
+    <h1 align="center" style="color: aqua"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true" style="margin-top: 5%"></span> 学生列表</h1>
+    <hr><div class="table-wrapper" style="height: 100%;padding: 5%;">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+                <th>专业</th>
+                <th>年级</th>
+                <th>学院</th>
+                <th>&nbsp</th>
+                <th>&nbsp</th>
+
+            </tr>
+            <br>
+            <tr>{% for stduent in stduent_all.items %}
+                <td style="color: deeppink">{{ stduent.num }}</td>
+                <td style="color: #484891">{{ stduent.name }}</td>
+                <td style="color: #616130">{{ stduent.major }}</td>
+                <td style="color: #616130">{{ stduent.grade }}</td>
+                <td style="color: #616130">{{ stduent.college }}</td>
+                <td><a href="{{ url_for('student_change',student_id=stduent.id) }}">修改</a></td>
+                <td><a id="rm_{{ stduent.id }}" href="#">删除</a></td>
+                </tr>
+                <script>
+                    $(document).ready(function () {
+                        {#            删除学生#}
+                        $('#rm_{{ stduent.id }}').click(function () {
+
+                            var DATAS = {
+                                rm_student: '{{stduent.id }}',
+                            }
+
+                            $.ajax({
+                                type: 'POST',
+                                url: '/student_delete/',
+                                data: DATAS,
+                                success: function () {
+
+                                    location.reload(true);
+                                },
+
+                            });
+                        })
+                    })
+
+                </script>
+            {% else %}
+                <pr>无数据，需要管理员添加</pr>
+            {% endfor %}
+
+            {% for message in get_flashed_messages() %}
+                {{ message }}
+            {% endfor %}
+
+        </table>
+        <br>
+        <br><br>
+     <nav >
+            <ul class="pagination"  style="margin-left: 30%;margin-top: 0%">
+                {%if stduent_all.has_prev%}
+                    <li class="page-item active">
+                        <a class="page-link" href="{{url_for('root_show_student',page=stduent_all.page - 1)}}">上一页</a>
+                    </li>
+                {%else%}
+                    <li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+                {%endif%}
+                {%for page in stduent_all.iter_pages(1,1,3,1)%}
+                    {%if page%}
+                        <li class="page-item {%if page==stduent_all.page%}active{%endif%}">
+                            <a class="page-link" href="{{url_for('root_show_student',page=page)}}">{{page}}</a>
+                        </li>
+                    {%else%}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#">&hellip;</a>
+                        </li>
+                    {%endif%}
+                {%endfor%}
+                {%if stduent_all.has_next%}
+                    <li class="page-item active">
+                        <a class="page-link" href="{{url_for('root_show_student',page=stduent_all.page + 1)}}">下一页</a>
+                    </li>
+                {%else%}
+                    <li class="page-item disabled"><a class="page-link" href="#">下一页</a></li>
+                {%endif%}
+            </ul>
+        </nav>
+    </div>
+    <div style="text-align:center;clear:both;">
+        <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+        <script src="/follow.js" type="text/javascript"></script>
+    </div>
+</div>
+<br>
+</body>
+</html>

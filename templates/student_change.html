@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>学生修改</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom CSS -->
+    <link href="../static/css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Graph CSS -->
+    <link href="../static/css/font-awesome.css" rel="stylesheet"> <!--选项的图标-->
+    <!-- jQuery -->
+    <link href='#css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="../static/css/icon-font.min.css" type='text/css'/>
+    <!-- //lined-icons -->
+    <script src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--clock init-->
+    <script src="../static/js/css3clock.js"></script>
+    <!--Easy Pie Chart-->
+    <!--skycons-icons-->
+    <script src="../static/js/skycons.js"></script>
+
+    <script src="../static/js/jquery.easydropdown.js"></script>
+    <style type="text/css">
+        .right{
+            width: 450px;
+            height:100%;
+            background-color: cornflowerblue;
+            margin: 0 auto;
+
+        }
+        .form-container{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation" style="margin-left:15%;width:70%;min-width:1000px;max-height:100px;box-shadow: 2px 3px 5px #285a63;border-radius: 10px">
+    <div class="container">
+        <h1><a href="{{ url_for('teacher_ui') }}" class="glyphicon glyphicon-education" style="background:none;float: left"></a><span style="float: left">课堂知识反馈 &nbsp;</span>
+            <form method="post" action="{{ url_for('root_find') }}" class="navbar-form navbar-left" style="margin-top:-5px;width: 30%">
+                <input type="text" name="input_name" class="form-control" placeholder="学生/教师名字">
+                <button type="submit" class="glyphicon glyphicon-search" value="查找" ></button>
+            </form>
+            <button  type="button" style="position:absolute;background-color:powderblue;margin-left:20%;font-size:25px;border-radius: 5px"><span class="glyphicon glyphicon-share-alt" ></span>
+                <a href="{{ url_for('root_show_student',page=1) }}" style="color:#000000;background-color:powderblue;font-size:20px">返回上一页</a></button>
+        </h1>
+    </div>
+</nav>
+<div class="page-container">
+    <div class="left-content">
+        <div class="sidebar-menu" style="background-color: #3bb3e0">
+            <header class="logo">
+                <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a
+                    href="{{ url_for('teacher_ui') }}"> <span id="logo"> <h1>教学反馈</h1></span>
+            </a>
+            </header>
+
+            <!--/down-->
+            <div class="down">
+                <a href="index.html"><img src="../static/img/1.jpg"></a>
+                <a href="index.html"><span class=" name-caret">{{ teacher_info.name }}</span></a>
+                <p>认真学习，努力变强！</p>
+                <ul>
+                    <li><a class="tooltips" href="{{ url_for('teacher_Per_info') }}"><span>个人中心</span><i
+                            class="lnr lnr-user"></i></a></li>
+                    <li><a class="tooltips" href="index.html"><span>设置</span><i class="lnr lnr-cog"></i></a></li>
+                    <li><a class="tooltips" href="{{ url_for('home') }}"><span>退出</span><i
+                            class="lnr lnr-power-switch"></i></a></li>
+                </ul>
+            </div>
+            <!--//down-->
+            <div class="menu" style="background-color: #2ecc71">
+                <ul id="menu" style="background-color: #2ecc71">
+                    <li><a href="{{ url_for('teacher_Per_info') }}"><i class="fa fa-tachometer"></i>
+                        <span>个人中心</span></a></li>
+                    <li><a href="#"><i class="lnr lnr-envelope"></i> <span>课程查询</span><span
+                            class="fa fa-angle-right"
+                            style="float: right"></span></a>
+                        <ul>
+                            <li><a href="{{ url_for('schedule') }}"><i class="fa fa-inbox"></i> 课程录入</a></li>
+                            <li><a href="{{ url_for('schedule_ui') }}"><i class="fa fa-pencil-square-o"></i>
+                                课程展示</a>
+                            </li>
+                        </ul>
+                    </li>
+                    {% if teacher_info.is_root %}
+                        <li><a href="chart.html"><i class="lnr lnr-chart-bars"></i> <span>用户添加</span> <span
+                                class="fa fa-angle-right" style="float: right"></span></a>
+                            <ul>
+                                <li><a href="{{ url_for('add_teacher') }}"><i class="lnr lnr-map"></i> 教师</a></li>
+                                <li><a href="{{ url_for('add_student') }}"><i class="lnr lnr-apartment"></i> 学生</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menu-comunicacao"><a href="#"><i class="fa fa-smile-o"></i><span>用户信息</span><span
+                                class="fa fa-angle-double-right" style="float: right"></span></a>
+                            <ul id="menu-comunicacao-sub">
+
+                                <li id="menu-arquivos"><a href="{{ url_for('root_show_teacher',page = 1) }}">教师</a>
+                                </li>
+                                <li id="menu-arquivos"><a href="{{ url_for('root_show_student',page = 1) }}">学生</a>
+                                </li>
+                                <li id="menu-arquivos"><a href="{{ url_for('export_excel') }}">通过Excel导入信息</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{#菜单栏隐藏#}
+<script>
+    var toggle = true;
+
+    $(".sidebar-icon").click(function () {
+        if (toggle) {
+            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+            $("#menu span").css({"position": "absolute"});
+        }
+        else {
+            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+            setTimeout(function () {
+                $("#menu span").css({"position": "relative"});
+            }, 400);
+        }
+
+        toggle = !toggle;
+    });
+</script>
+<div class="right" style="box-shadow: 3px 5px 10px #285a63;border-radius: 10px">
+    <form class="form-container"  style="margin-left:-5%;padding:40px" method="post">
+        <h1 align="center" style="color: aqua"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;信息修改</h1>
+        <a ><span class=" name-caret">学生{# :{{ teacher_info.name }} #}</span></a>
+        <hr width="200px" color="#283348">
+        <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" pattern = "^-?\d+$" maxlength = 11 class="form-control" name="id" placeholder="学号">
+            </div>
+            <br><br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" placeholder="姓名">
+            </div><br><br>
+            <label for="inputPassword3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="密码">
+            </div><br><br>
+                <label for="inputPassword3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="password1" placeholder="确认密码">
+                </div><br><br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="major" placeholder="专业">
+            </div><br><br>
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="grade" placeholder="班级">
+            </div><br><br>
+
+            <label for="inputEmail3" class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="department" placeholder="所属学院">
+            </div><br><br>
+            <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class=" btn-primary btn-lg btn-block">提交</button>
+{#                <button type="submit" class="btn btn-default">登陆</button>#}
+            </div><br><br>
+
+         <br class="col-sm-10">
+                {% for message in get_flashed_messages() %}
+                            <h4 align="center">{{ message }}</h4>
+                {% endfor %}
+        <br>
+    </form>
+</div>
+<br>
+</body>
+</html>

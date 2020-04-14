@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="project_traning@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
+    <root id="1"/>
+    <schema id="2" parent="1" name="project_traning">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="author_sql"/>
+    <schema id="4" parent="1" name="db_demo1"/>
+    <schema id="5" parent="1" name="db_demo2"/>
+    <schema id="6" parent="1" name="flask_sql_demo"/>
+    <schema id="7" parent="1" name="flask_sql_demo1"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="module_demo1"/>
+    <schema id="10" parent="1" name="module_demo2"/>
+    <schema id="11" parent="1" name="module_demo4"/>
+    <schema id="12" parent="1" name="mysql"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="shizhan"/>
+    <schema id="15" parent="1" name="sql_demo1"/>
+    <schema id="16" parent="1" name="sql_demo3"/>
+    <schema id="17" parent="1" name="sys"/>
+    <table id="18" parent="2" name="alembic_version"/>
+    <column id="19" parent="18" name="version_num">
+      <Position>1</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="20" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>version_num</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

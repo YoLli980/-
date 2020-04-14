@@ -1,0 +1,102 @@
+{% extends "father.html" %}
+
+{% block add_user %}
+{#    <li><a href="#">欢迎.{{ student_info.name }}</a></li>#}
+
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+           aria-expanded="false">选择课程</a>
+        <ul class="dropdown-menu" >
+            <li><a href="{{ url_for('student_selet',name = '计算机工程技术学院') }}">计算机工程技术学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '大数据与人工智能学院') }}">大数据与人工智能学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '经济管理学院') }}">经济管理学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '外国语学院') }}">外国语学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '人文社会科学学院') }}">人文社会科学学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '机械与电子工程学院') }}">机械与电子工程学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '建筑工程学院') }}">建筑工程学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '艺术设计学院') }}">艺术设计学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '财会与金融学院') }}">财会与金融学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '广州学院') }}">广州学院</a></li>
+            <li><a href="{{ url_for('student_selet',name = '体育系') }}">体育系</a></li>
+        </ul>
+    </li>
+{% endblock %}
+
+
+{% block main %}
+
+ <style>
+        .a{ width: 205px; }
+        .b{ width: 110px; height: 100px; background-color: limegreen;
+            text-align: center;line-height: 100px; color: #ffffff; font-size: large }
+        .c{ width: 110px; height: 120px; background-color: lightcyan; display: none; /*可见性：隐藏;*/ }
+        ul{ list-style: none; margin-left: 0%; }
+        ul li{ line-height: 60px; display: block;width: 110px; text-align: center; font-size: large }/*隐藏条的高度宽度;*/
+        .a:hover{ cursor: pointer; } .a:hover .c{ display: block; }
+        .a:hover .b{ background-color: green; }
+        li:hover{ background-color: lightgreen; color: blue; }
+ </style>
+        <style type ="text/css">
+        body{
+            background: #f1f2f6;
+            top:0px;
+            left: 0px;
+{#            position:absolute;#}
+            z-index:-1;
+            margin-left: 0px;
+            padding-right: 0px;
+        }
+    </style>
+ <div id="main" style="width:100%; ">
+        <div id="left" style="float:left ;margin-left: 15%; width:10%; height:80%;">
+            <div>
+                <h1 class="a">
+                    <div class="b">个人中心</div>
+                    <div class="c">
+                        <ul> <li>个人信息</li>
+                            <li>修改信息</li>
+                        </ul>
+                    </div>
+                </h1>
+
+                <h1 class="a">
+                    <div class="b">课后反馈</div>
+                    <div class="c">
+                        <ul> <li>课堂反馈</li>
+                            <li>知识点反馈</li>
+                        </ul>
+                    </div>
+                </h1>
+                <h1 class="a">
+                    <div class="b">其他</div>
+                    <div class="c">
+                        <ul> <li>提供建议</li>
+                            <li>寻求帮助</li>
+                        </ul>
+                    </div>
+                </h1>
+            </div>
+        </div>
+        <div id="right" style="float:right ; width:50%; margin-right: 20%;">
+                {% block stu_center_show %}
+
+                {% endblock %}
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

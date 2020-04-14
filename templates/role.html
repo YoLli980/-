@@ -1,0 +1,21 @@
+{% extends "father.html" %}
+{% block title %}
+    管理员登录界面
+{% endblock %}
+{% block add_user %}
+
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="{{ url_for('export_excel') }}">通过Excel导入信息</a>
+    </button>
+
+    <form method="post" action="{{ url_for('root_find')}}" class="navbar-form navbar-left" style="width: 25%">
+
+        <input type="text" name="input_name" class="form-control" placeholder="学生/教师名字">
+        <button type="submit" class="glyphicon glyphicon-search" value="查找"></button>
+    </form>
+
+
+
+{% endblock %}
+
+{##}

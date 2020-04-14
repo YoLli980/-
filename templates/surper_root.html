@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/surper_root.css">
+</head>
+<body>
+
+<div id="logo">
+
+</div>
+<div id="top">
+    <div class="container">
+        <ul id="left_side" style="margin: 0;padding: 0">
+            <li>
+                <a style="padding-left: 0px;" href="">课程知识反馈系统后台管理</a>
+
+            </li>
+
+        </ul>
+
+        <div class="input_find">
+            <input class="input_value" type="text" placeholder="学生\教师姓名">
+            <input class="but" type="button" value="查找">
+        </div>
+        <div class="right_side right">
+
+            <ul>
+                <li>
+                    <a href="">查看信息</a>
+                    <ul>
+                        <li><a href="{{ url_for('surper_root_student',page = 1) }}"> 学生</a></li>
+                        <li><a href="{{ url_for('surper_root_teacher',page = 1) }}"> 教师</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                    <ul>
+
+
+                    </ul>
+                </li>
+
+                <li><a href="{{ url_for('home') }}">退出登录</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div id="center">
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

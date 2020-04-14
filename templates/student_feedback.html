@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* css 代码  */
+        </style>
+        <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    </head>
+
+
+    <body>
+        <div id="container" style=" min-width:400px;height:400px"></div>
+        <script>
+            var chart = Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: '{{ proficiency_all_name }}: 掌握情况'
+    },
+{#    subtitle: {#}
+{#        text: '数据截止 2019/10/11，来源: <a href="https://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'#}
+{#    },#}
+    xAxis: {
+        type: 'category',
+        labels: {
+            rotation: -45  // 设置轴标签旋转角度
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: '知识点掌握情况'
+        }
+    },
+    legend: {
+        enabled: false
+    },
+    tooltip: {
+        pointFormat: '人数总量: <b>{point.y} 人</b>'
+    },
+    series: [{
+        name: '{{ sum }}',
+        data: [
+            ['全掌握', {{ A }}],
+            ['基本掌握', {{ B }}],
+            ['未掌握', {{ C }}],
+        ],
+        dataLabels: {
+            enabled: true,
+            rotation: -90,
+            color: '#FFFFFF',
+            align: 'right',
+            format: '{point.y}', // :.1f 为保留 1 位小数
+            y: 1
+        }
+    }]
+});
+        </script>
+    </body>
+</html>

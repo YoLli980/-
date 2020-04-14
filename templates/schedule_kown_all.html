@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+     <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* css 代码  */
+        </style>
+         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    </head>
+</head>
+<body>
+
+
+<script>
+    var dataList = new Array();
+</script>
+{% for foo in kown_name %}
+
+    <input type="hidden" id="{{ foo }}" value="{{ foo }}"></input>
+    <script>
+        {#        var dataList=new Array();#}
+        dataList.push($("#{{ foo}}").val());
+    </script>
+
+
+{% endfor %}
+
+
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+<script language="JavaScript">
+
+
+
+
+
+    $(document).ready(function () {
+
+        var chart = Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '课程名称：{{ sch.name }}'
+            },
+            xAxis: {
+                categories: dataList
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '知识点的掌握程度'
+                },
+                stackLabels: {  // 堆叠数据标签
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+            },
+            legend: {
+                align: 'right',
+                x: -30,
+                verticalAlign: 'top',
+                y: 25,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br/>' +
+                        this.series.name + ': ' + this.y + '<br/>' +
+                        '总量: ' + this.point.stackTotal;
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            // 如果不需要数据标签阴影，可以将 textOutline 设置为 'none'
+                            textOutline: '1px 1px black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '全掌握',
+                 data: {{A}}
+            }, {
+                name: '基本掌握',
+                data: {{B}}
+            }, {
+                name: '未掌握',
+                data: {{C}}
+
+            }]
+
+
+        });
+    });
+</script>
+</body>
+</html>
